@@ -1,0 +1,39 @@
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-bottom: 2px #1b4942 solid;
+    height: 60px;
+    padding: 0px 20px;
+}
+
+.logo{
+    margin-right: 20px;
+    color: #1b4942;
+    font-size: 24px;
+    font-weight: 700;
+    transition: text-shadow 0.3s ease;
+}
+
+.logo:hover{
+    text-shadow: 4px 4px 16px rgba(27,73,66,0.6);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    min-height: calc(100vh - 322px);
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    background-color: rgb(34, 34, 34);
+    height: 200px;
+}
