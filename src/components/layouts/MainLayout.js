@@ -5,7 +5,7 @@ export function MainLayout(props) {
 	return (
 		<>
 			<header>
-				<span className="logo">Thinking name</span>
+				<span className="logo">PetPalaceHub</span>
 				header
 			</header>
 			<main>{props.children}</main>
