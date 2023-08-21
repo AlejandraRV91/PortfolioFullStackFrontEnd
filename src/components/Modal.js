@@ -9,7 +9,7 @@ const Modal = ({ isOpen, onClose, title, message, children }) => {
 
 	return (
 		<div className="modal-overlay">
-			<div className="modal">
+			<div className="modal-container-custom">
 				<h2>{title}</h2>
 				<p>{message}</p>
 				{children}

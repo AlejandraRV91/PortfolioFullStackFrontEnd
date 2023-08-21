@@ -145,11 +145,11 @@ export function ShowPage({ lang }) {
 								className="delete-btn"
 								onClick={handleDelete}>
 								<img src={deleteIcn} alt="delete" />
-								Delete
+								{lang === "es" ? "Eliminar" : "Delete"}
 							</button>
 							<button className="edit-btn" onClick={handleEdit}>
 								<img src={edit} alt="edit" />
-								Delete
+								{lang === "es" ? "Editar" : "Edit"}
 							</button>
 							<button
 								className={

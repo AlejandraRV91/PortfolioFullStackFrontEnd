@@ -5,10 +5,11 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { MainLayout } from "./components/layouts/MainLayout";
 import NotFound from "./components/NotFound";
 import { IndexPage } from "./components/IndexPage";
-import { EditPage } from "./components/EditPage";
 import { ShowPage } from "./components/ShowPage";
 import { NewPage } from "./components/NewPage";
 import { useState } from "react";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import EditPage from "./components/EditPage";
 
 function App() {
 	const [lang, setlang] = useState("en");

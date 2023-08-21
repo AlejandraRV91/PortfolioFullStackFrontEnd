@@ -17,7 +17,7 @@ const FreeModal = ({
 
 	return (
 		<div className="modal-overlay">
-			<div className="modal">
+			<div className="modal-container-custom">
 				<h2>{title}</h2>
 				<p>{message}</p>
 				{children}

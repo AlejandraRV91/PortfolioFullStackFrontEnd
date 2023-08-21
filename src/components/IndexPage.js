@@ -115,7 +115,7 @@ export function IndexPage(props) {
 	return (
 		<>
 			<div className="filter-container">
-				<span>Filters: </span>
+				<span>{props.lang === "es" ? "Filtros" : "Filters"}: </span>
 				<Select
 					className="filter"
 					options={breeds}
@@ -132,7 +132,11 @@ export function IndexPage(props) {
 							primary: "#0f2c27",
 						},
 					})}
-					placeholder="Filter by Breed"
+					placeholder={
+						props.lang === "es"
+							? "Filtrar por Raza"
+							: "Filter by Breed"
+					}
 					isSearchable={true}
 				/>
 
@@ -152,7 +156,11 @@ export function IndexPage(props) {
 							primary: "#0f2c27",
 						},
 					})}
-					placeholder="Filter by Type"
+					placeholder={
+						props.lang === "es"
+							? "Filtrar por tipo"
+							: "Filter by Type"
+					}
 					isSearchable={true}
 				/>
 			</div>
