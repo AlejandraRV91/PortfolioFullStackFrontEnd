@@ -7,12 +7,16 @@ import "./ShowPage.css";
 import { formatReadableDate, translateString } from "../utils/Functions";
 import { Store } from "./Store";
 import cart from "./assets/cart-icon.svg";
+import deleteIcn from "./assets/delete-icon.svg";
+import edit from "./assets/edit-icon.svg";
 import ReceiptPDF from "./ReceiptPDF";
 import { PDFDownloadLink, PDFViewer } from "@react-pdf/renderer";
 import FreeModal from "./FreeModal";
 import Modal from "./Modal";
+import { useNavigate } from "react-router-dom";
 
 export function ShowPage({ lang }) {
+	let navigate = useNavigate();
 	const [pet, setpet] = useState([]);
 	const [viewPdf, setviewPdf] = useState(false);
 	const [cantBuy, setcantBuy] = useState(false);
@@ -30,6 +34,21 @@ export function ShowPage({ lang }) {
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 
+	function handleDelete() {
+		axios
+			.delete(api + "/pets/" + id)
+			.then((res) => {
+				navigate("/");
+			})
+			.catch((e) => {
+				console.log(e);
+			});
+	}
+
+	function handleEdit() {
+		navigate("/edit/" + id);
+	}
+
 	let handleBuy = () => {
 		setviewPdf(false);
 		axios
@@ -45,15 +64,17 @@ export function ShowPage({ lang }) {
 			});
 	};
 
-	const [traduction, settraduction] = useState([pet.type,pet.description]);
+	const [traduction, settraduction] = useState([pet.type, pet.description]);
 
 	useEffect(() => {
 		if (lang === "es") {
-			translateString([pet.type,pet.description].join("%@")).then((res) => {
-				settraduction(res.split("%@"));
-			});
+			translateString([pet.type, pet.description].join("%@")).then(
+				(res) => {
+					settraduction(res.split("%@"));
+				}
+			);
 		} else {
-			settraduction([pet.type,pet.description]);
+			settraduction([pet.type, pet.description]);
 		}
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [lang, pet]);
@@ -121,7 +142,20 @@ export function ShowPage({ lang }) {
 						</p>
 						<div className="buy-btn-container">
 							<button
-								className={pet.is_available ? "" : "disabled"}
+								className="delete-btn"
+								onClick={handleDelete}>
+								<img src={deleteIcn} alt="delete" />
+								Delete
+							</button>
+							<button className="edit-btn" onClick={handleEdit}>
+								<img src={edit} alt="edit" />
+								Delete
+							</button>
+							<button
+								className={
+									"buy-btn" +
+									(pet.is_available ? "" : " disabled")
+								}
 								onClick={() => {
 									if (pet.is_available) {
 										setviewPdf(true);

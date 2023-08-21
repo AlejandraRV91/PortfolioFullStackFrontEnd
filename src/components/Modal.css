@@ -33,13 +33,27 @@
 }
 
 .accept-button {
-    background-color: #505050;
+    background-color: #1b4942;
     color: white;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.accept-button:hover {
+    transform: scale(1.05);
+    background-color: #0f2c27;
+}
+
+.reject-button:hover {
+    transform: scale(1.05);
+    background-color: #0f2c27;
 }
 
 .reject-button {
     background-color: #000000;
     color: white;
+    transition: all 0.3s ease;
+    font-weight: bold;
 }
 
 .modal h2 {
