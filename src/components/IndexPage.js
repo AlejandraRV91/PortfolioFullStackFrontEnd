@@ -5,8 +5,7 @@ import "./IndexPage.css";
 import Select from "react-select";
 import axios from "axios";
 import Pet from "./Pet";
-
-export function IndexPage() {
+export function IndexPage(props) {
 	const [pets, setpets] = useState([]);
 	const [types, settypes] = useState([
 		{
@@ -29,14 +28,16 @@ export function IndexPage() {
 	let api = process.env.REACT_APP_API_URL;
 
 	useEffect(() => {
-		axios
-			.get(api + "/pets")
-			.then((res) => {
-				setpets(res.data);
-			})
-			.catch((e) => {
-				console.log(e);
-			});
+		if (pets.length === 0) {
+			axios
+				.get(api + "/pets")
+				.then((res) => {
+					setpets(res.data);
+				})
+				.catch((e) => {
+					console.log(e);
+				});
+		}
 
 		if (breeds.length === 1) {
 			axios
@@ -158,11 +159,7 @@ export function IndexPage() {
 
 			<div className="pets-container">
 				{filteredPets.map((pet) => {
-					return (
-						<>
-							<Pet pet={pet} key={pet.id}></Pet>
-						</>
-					);
+					return <Pet lang={props.lang} pet={pet} key={pet.id}></Pet>;
 				})}
 			</div>
 		</>

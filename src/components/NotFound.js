@@ -4,14 +4,23 @@ import { useEffect } from "react";
 import image1 from "./assets/error-404-alert.png";
 import image2 from "./assets/error-404-art.png";
 
-const NotFound = () => {
+const NotFound = (props) => {
 	useEffect(() => {
 		document.title = "Error";
 	}, []);
 	return (
 		<div>
-			<h2>Error 404: Página no encontrada</h2>
-			<p>La página que estás buscando no existe.</p>
+			<h2>
+				Error 404:{" "}
+				{props.lang === "es"
+					? "Página no encontrada"
+					: "Page not found"}
+			</h2>
+			<p>
+				{props.lang === "es"
+					? "La página que estás buscando no existe."
+					: "The page you are looking for does not exist."}
+			</p>
 			<div style={{ display: "flex", justifyContent: "center" }}>
 				<img
 					src={image1}

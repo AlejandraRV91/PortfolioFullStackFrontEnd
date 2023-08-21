@@ -22,3 +22,7 @@
 .filter {
     width: 20vw
 }
+
+.filter *{
+    cursor: pointer;
+}

@@ -7,6 +7,7 @@
     width: 350px;
     margin: 10px;
     transition: all 0.3s ease;
+    cursor: pointer;
 }
 
 .pet-card:hover {
@@ -22,10 +23,6 @@
     object-fit: cover;
     border-radius: 50%;
     margin-right: 16px;
-}
-
-.pet-details {
-    flex: 1;
 }
 
 .pet-name {
