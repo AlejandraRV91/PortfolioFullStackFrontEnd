@@ -8,7 +8,10 @@ Welcome to PetPalaceHub, a project for managing information about pet owners and
 This project is designed to use this backend: [Backend link](https://github.com/AlejandraRV91/PortfolioFullStackBackEnd)
 
 ## Deployed Project
-Test the functionality on: [Deployed projest link]()
+Test the functionality on: 
+[Deployed Backend](https://lazy-erin-gorilla-suit.cyclic.cloud/)
+[Deployed Frontend](https://main--splendorous-tanuki-80e1e4.netlify.app/)
+
 
 ## Project Setup
 
