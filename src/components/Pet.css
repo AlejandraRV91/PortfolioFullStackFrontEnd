@@ -1,0 +1,48 @@
+.pet-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    padding: 16px;
+    width: 350px;
+    margin: 10px;
+    transition: all 0.3s ease;
+}
+
+.pet-card:hover {
+    transform: scale(1.03);
+    box-shadow: 8px 13px 21px -2px rgba(0, 0, 0, 0.48);
+    -webkit-box-shadow: 8px 13px 21px -2px rgba(0, 0, 0, 0.48);
+    -moz-box-shadow: 8px 13px 21px -2px rgba(0, 0, 0, 0.48);
+}
+
+.pet-image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 16px;
+}
+
+.pet-details {
+    flex: 1;
+}
+
+.pet-name {
+    margin: 0;
+    font-size: 24px;
+}
+
+
+.pet-info {
+    margin-top: 16px;
+}
+
+.pet-info p {
+    margin: 4px 0;
+    font-size: 14px;
+}
+
+.pet-price {
+    color: #137051;
+}

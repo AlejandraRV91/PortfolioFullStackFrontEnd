@@ -6,7 +6,9 @@ export function MainLayout(props) {
 		<>
 			<header>
 				<span className="logo">PetPalaceHub</span>
-				header
+				<div className="header-btns">
+					<button>Add a pet</button>
+				</div>
 			</header>
 			<main>{props.children}</main>
 			<footer>footer</footer>

@@ -1,0 +1,24 @@
+.pets-container {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.filter-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.filter-container * {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.filter {
+    width: 20vw
+}

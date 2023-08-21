@@ -7,7 +7,7 @@ header {
     padding: 0px 20px;
 }
 
-.logo{
+.logo {
     margin-right: 20px;
     color: #1b4942;
     font-size: 24px;
@@ -15,8 +15,8 @@ header {
     transition: text-shadow 0.3s ease;
 }
 
-.logo:hover{
-    text-shadow: 4px 4px 16px rgba(27,73,66,0.6);
+.logo:hover {
+    text-shadow: 4px 4px 16px rgba(27, 73, 66, 0.6);
 }
 
 main {
@@ -37,3 +37,28 @@ footer {
     background-color: rgb(34, 34, 34);
     height: 200px;
 }
+
+.header-btns{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+
+}
+
+.header-btns button{
+    background-color: #1b4942;
+    border-radius: 5px;
+    padding: 8px 25px;
+    border-width: 0px;
+    color: white;
+
+    transition: all 0.3s ease;
+}
+
+.header-btns button:hover{
+    transform: scale(1.05);
+    background-color: #0f2c27;
+}
+
